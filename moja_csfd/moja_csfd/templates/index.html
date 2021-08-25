@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ section.title }}
+{% endblock %}
+
+{% block content %}
+<h1>{{ section.title }}</h1>
+{{ login }}
+<ul>
+{% for movie_name, movie in movies.items %}
+	<li><a href="{{ movie.URL }}">{{ movie_name }}</a></li>
+	<p> {{movie.zaner}} </p>
+	<p> {{movie.predloha}} </p>
+	<p> {{movie.scenar}} </p>
+	<p> {{movie.ucinkujuci}} </p>
+	<kbd>{{movie.hodnotenie}} </kbd>
+{% endfor %}
+</ul>
+
+{% endblock %}
